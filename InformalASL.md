@@ -17,7 +17,7 @@ Describe your activities more formally using the following template:
 
 #### Example: add
 
-* Abstract: The add activity conveys that the actor engaged in a physical exercise from startTime until endTime and that information about this activity was added to an exercise log. The activity also carries a universally unique identifier and holds more detailed information about the specific type of physical exercise.
+* Abstract: The **add** activity conveys that the actor engaged in a physical exercise from startTime until endTime and that information about this activity was added to an exercise log. The activity also carries a universally unique identifier and holds more detailed information about the specific type of physical exercise.
 * Properties
   * **subVerb**: This property carries more information about the nature of the data that was added
   * **UUID**: This property carries a unique identifier for the activity
