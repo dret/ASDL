@@ -5,7 +5,7 @@ Starting from the [Activity Streams Base Schema](https://github.com/activitystre
 * Abstract: What can/should your activity be used for, in 100 words
 * Properties
   * List all properties of the activity (e.g., verb, actor, status, etc.). You can omit describing properties if their interpretation is the same as in the activity base schema, but often it may still be helpful to describe their specific interpretation in your context. Always keep in mind that you cannot *change* the base property definitions; whatever you use them for has to make sense for somebody who does not know your specific use, and interprets them according to their definition in the base schema.
-  * Take care that properties that you define for your activity do not hijack similar properties in the activity base schema. If in doubt, clarify what the difference between your property and the base property is.
+  * Take care that properties that you define for your activity do not duplicate or redefine similar properties in the activity base schema. If in doubt, clarify what the difference between your property and similar properties is. Would it make sense to use both at the same time and if so, what would that mean?
 * Generic use of activity properties: State which of the properties you described might be reused in different contexts. Which of the properties do you reuse within your project? Give examples!
 * Object Types
   * List all objects that your activity can have together with their object type.
