@@ -32,34 +32,34 @@ Describe your activities more formally using the following template:
 * Natural language interpretation: `actor.displayName exercised from startTime until endTime. The raw data for this exercise can be found at object.url, it contains the fields dataFields[]`
 * Example:
 
-    {
-      "actor": {
-        "displayName": "TestPatient",
-        "id": "http://example.org/TestPatient",
-        "objectType": "person"
-      },
-      "verb": "add",
-      "startTime": "2015-01-05T17:33:40.000Z",
-      "published": "2015-01-06T15:04:55.000Z",
-      "endTime": "2015-01-05T19:08:39.000Z",
-      "uuid": "http://example.org/activities/TestPatient_add_2015_01_05_1",
-      "subVerb": "http://siemens.com/schemas/activity#Cycling",
-      "status": "completed",
-      "object": {
-        "dataFields": [
-          "u_id",
-          "date_epoch",
-          "date_human",
-          "heartrate",
-          "steps",
-          "calories",
-          "gsr",
-          "skin_temp",
-          "air_temp"
-        ],
-        "url": "http://russet.ischool.berkeley.edu:8081/health_upload_as_EDF.csv",
-        "objectType": "exerciseRecord"
-      }
-    }
-  ]
-}`
+``` json
+{
+  "actor": {
+    "displayName": "TestPatient",
+    "id": "http://example.org/TestPatient",
+    "objectType": "person"
+  },
+  "verb": "add",
+  "startTime": "2015-01-05T17:33:40.000Z",
+  "published": "2015-01-06T15:04:55.000Z",
+  "endTime": "2015-01-05T19:08:39.000Z",
+  "uuid": "http://example.org/activities/TestPatient_add_2015_01_05_1",
+  "subVerb": "http://siemens.com/schemas/activity#Cycling",
+  "status": "completed",
+  "object": {
+    "dataFields": [
+      "u_id",
+      "date_epoch",
+      "date_human",
+      "heartrate",
+      "steps",
+      "calories",
+      "gsr",
+      "skin_temp",
+      "air_temp"
+    ],
+    "url": "http://russet.ischool.berkeley.edu:8081/health_upload_as_EDF.csv",
+    "objectType": "exerciseRecord"
+  }
+}
+```
