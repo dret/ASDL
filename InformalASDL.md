@@ -1,10 +1,10 @@
-Describe your activities more formally using the following template:
+Starting from the [Activity Streams Base Schema](https://github.com/activitystreams/activity-schema/blob/master/activity-schema.md), determine which of the base verbs, object types, and properties you can reuse, and where you have to invent new ones. Describe your activities in a structured way using the following template:
 
 #### Activity Name
 
 * Abstract: What can/should your activity be used for, in 100 words
 * Properties
-  * List all properties of the activity (e.g., verb, actor, status, etc.). You can omit defining properties if their interpretation is the same as in the activity base schema.
+  * List all properties of the activity (e.g., verb, actor, status, etc.). You can omit describing properties if their interpretation is the same as in the activity base schema, but often it may still be helpful to describe their specific interpretation in your context. Always keep in mind that you cannot *change* the base property definitions; whatever you use them for has to make sense for somebody who does not know your specific use, and interprets them according to their definition in the base schema.
   * Take care that properties that you define for your activity do not hijack similar properties in the activity base schema. If in doubt, clarify what the difference between your property and the base property is
 * Generic use of activity properties: State which of the properties you described might be reused in different contexts. Which of the properties do you reuse within your project? Give examples!
 * Object Types
