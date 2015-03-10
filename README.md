@@ -9,4 +9,4 @@ ASDL is work in progress, currently the following resources are available:
 
 * [An early draft of the ASDL specification.](draft.md)
 
-* [A early sketch of what ASDL should be able to do, including an example.](InformalASDL.md)
+* [An early sketch of what ASDL should be able to do, including an example.](InformalASDL.md)
