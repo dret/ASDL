@@ -21,7 +21,7 @@ The current ASDL specification is an early draft and is likely to change. It cur
 
 * **Verbs**: According to [AS 1.0, a verb "identifies the action that the activity describes"](http://activitystrea.ms/specs/json/1.0/#activity). Verbs can be either identified by plain strings, or by URIs. ASDL recommends that plain strings SHOULD only be used if a vocabulary is likely to undergo standardization and publication, so that there is public and findable documentation available. In all other cases, verbs SHOULD be identified by URIs to avoid possible naming conflicts. In case of URI-identified verbs, those defining them MAY make them dereferencable and provide helpful resources, such as ASDL or other kinds of documentation or description.
 
-* **Object Types**:
+* **Object Types**: According to [AS 1.0, an object type "identifies the type of object", and "if no objectType property is contained, the object has no specific type"](http://activitystrea.ms/specs/json/1.0/#object). Objects themselves ["describe the primary object of the activity"](http://activitystrea.ms/specs/json/1.0/#activity). Object types can be either identified by plain strings, or by URIs. ASDL recommends that plain strings SHOULD only be used if a vocabulary is likely to undergo standardization and publication, so that there is public and findable documentation available. In all other cases, object types SHOULD be identified by URIs to avoid possible naming conflicts. In case of URI-identified object types, those defining them MAY make them dereferencable and provide helpful resources, such as ASDL or other kinds of documentation or description.
 
 * **Object Properties**:
 
