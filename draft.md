@@ -45,7 +45,24 @@ The current ASDL specification is an early draft and is likely to change. It cur
 While Verbs and Object Types can be identified by string or URI (which is possible because their identifiers appear in the "value" part of JSON members), object properties can only be identified by strings (because their identifiers appear in the "name" part of JSON members).
 
 
+ASDL Documentation
+------------------
+
+AS 1.0 extensions using ASDL for documenting their vocabulary can use ASDL to document their vocabulary. ASDL uses the same concepts for documenting verbs, object types, and object properties:
+
+* **Identifier**: This identifies the concept according to the concept's naming rules (strings or URIs for verbs and object types, strings for object properties).
+
+* **Documentation URI**: An optional URI linking to a description of the concept that may go beyond the expressiveness of ASDL. For example, it would be possible to link to URIs that dereference to RDF or other description frameworks, if the author of an extension chose create these descriptions and make them available. It can also just be a stable reference to the ASDL documentation itself, so that there always is a dereferencable identifier for a concept's description.
+
+* **Documentation Text**: The documentation text given an explanation of the documented concept. This documentation must satisfy the requirements given in the AS 1.0 extension model. This means the following:
+
+** For verbs, it must define the meaning of the verb in terms of the actor, object and target properties of the activity, and MUST define whether a target is required and what it represents when present. 
+
+** For object types, the documentation MAY define additional properties.
+
+** For object properties, the documentation MUST define how these properties are to be serialized within the JSON document.
+
 ASDL Documents
 --------------
 
-AS 1.0 extensions using ASDL for 
+ASDL uses (Markdown)[http://daringfireball.net/projects/markdown/] as its syntax, thereby avoiding the complexity of more powerful languages such as HTML, XML, JSON, RDF, or YAML. 
