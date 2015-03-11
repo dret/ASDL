@@ -56,11 +56,11 @@ AS 1.0 extensions using ASDL for documenting their vocabulary can use ASDL to do
 
 * **Documentation Text**: The documentation text given an explanation of the documented concept. This documentation must satisfy the requirements given in the AS 1.0 extension model. This means the following:
 
-** For verbs, it must define the meaning of the verb in terms of the actor, object and target properties of the activity, and MUST define whether a target is required and what it represents when present. 
+  * For verbs, it must define the meaning of the verb in terms of the actor, object and target properties of the activity, and MUST define whether a target is required and what it represents when present. 
 
-** For object types, the documentation MAY define additional properties.
+  * For object types, the documentation MAY define additional properties.
 
-** For object properties, the documentation MUST define how these properties are to be serialized within the JSON document.
+  * For object properties, the documentation MUST define how these properties are to be serialized within the JSON document.
 
 ASDL Documents
 --------------
