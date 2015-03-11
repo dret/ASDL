@@ -65,4 +65,4 @@ AS 1.0 extensions using ASDL for documenting their vocabulary can use ASDL to do
 ASDL Documents
 --------------
 
-ASDL uses (Markdown)[http://daringfireball.net/projects/markdown/] as its syntax, thereby avoiding the complexity of more powerful languages such as HTML, XML, JSON, RDF, or YAML. 
+ASDL uses [Markdown](http://daringfireball.net/projects/markdown/) as its syntax, thereby avoiding the complexity of more powerful languages such as HTML, XML, JSON, RDF, or YAML. 
