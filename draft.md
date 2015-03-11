@@ -1,7 +1,7 @@
-Activity Stream Description Language (ASDL) 0.1
-===============================================
+Activity Stream Documentation Language (ASDL) 0.1
+=================================================
 
-The *Activity Stream Description Language (ASDL)* is used for describing Activity Streams (AS) vocabularies.
+The *Activity Stream Documentation Language (ASDL)* is used for describing Activity Streams (AS) vocabularies.
 
 Introduction
 ------------
@@ -43,3 +43,9 @@ The current ASDL specification is an early draft and is likely to change. It cur
 * **Object Properties**: AS 1.0 objects contain properties, and some of these are defined in the [AS 1.0 Core specification](http://activitystrea.ms/specs/json/1.0/), and others in the [AS 1.0 Base Schema](https://github.com/activitystreams/activity-schema/blob/master/activity-schema.md). While properties may be defined in a way that they only/mostly make sense for specific object type(s), the definition of object properties is not scoped, meaning that strictly speaking, properties cannot be limited to specific object type(s).
 
 While Verbs and Object Types can be identified by string or URI (which is possible because their identifiers appear in the "value" part of JSON members), object properties can only be identified by strings (because their identifiers appear in the "name" part of JSON members).
+
+
+ASDL Documents
+--------------
+
+AS 1.0 extensions using ASDL for 
