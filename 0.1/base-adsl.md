@@ -1,6 +1,7 @@
 Verbs
 =====
 
+
 accept
 ------
 
@@ -56,3 +57,41 @@ Indicates that the actor has acknowledged the object. This effectively signals t
     "Sally acknowledged Issue #123"
   }
 ```
+
+
+Object Types
+============
+
+
+alert
+-----
+
+Represents any kind of significant notification.
+
+
+application
+-----------
+
+Represents any kind of software application.
+
+
+article
+-------
+
+Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources.
+
+
+Object Properties
+=================
+
+
+embedCode
+---------
+
+This property is defined to be a String. It is a fragment of HTML markup that, when embedded within another HTML page, provides an interactive user-interface for viewing or listening to the video or audio stream.
+
+
+stream
+------
+
+This property is defined to be a Media Link. It represents an Activity Streams Media Link to the video or audio content itself. 
