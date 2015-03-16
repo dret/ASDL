@@ -65,4 +65,12 @@ AS 1.0 extensions using ASDL for documenting their vocabulary can use ASDL to do
 ASDL Documents
 --------------
 
-ASDL uses [Markdown](http://daringfireball.net/projects/markdown/) as its syntax, thereby avoiding the complexity of more powerful languages such as HTML, XML, JSON, RDF, or YAML. 
+ASDL uses [Markdown](http://daringfireball.net/projects/markdown/) as its syntax, thereby avoiding the complexity of more powerful languages such as HTML, XML, JSON, RDF, or YAML.
+
+Three of the Markdown heading levels have special significance for ASDL, and must be used as following for an ASDL document do be considered correct:
+
+* **ASDL Title (H1 heading)**
+
+* **ASDL Category (H2 heading)**
+
+* **ASDL Concept (H3 heading)**
