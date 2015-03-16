@@ -74,3 +74,5 @@ Three of the Markdown heading levels have special significance for ASDL, and mus
 * **ASDL Category (H2 heading)**
 
 * **ASDL Concept (H3 heading)**
+
+* **ASDL Links (H4 heading)**: ASDL supports links to supporting documentation or specifications through ASDL links. These links are used by *only* specifying a URI, and doing so in a H4 heading directly after the ASDL title, or an ASDL concept.
