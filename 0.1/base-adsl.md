@@ -1,9 +1,9 @@
-Verbs
-=====
+# Activity Streams Base Schema
+
+## Verbs
 
 
-accept
-------
+### accept
 
 Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.
 
@@ -21,8 +21,7 @@ Indicates that that the actor has accepted the object. For instance, a person ac
 ```
 
 
-access
-------
+### access
 
 Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.
 
@@ -40,8 +39,7 @@ Indicates that the actor has accessed the object. For instance, a person accessi
   }```
 
 
-acknowledge
------------
+### acknowledge
 
 Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.
 
@@ -59,39 +57,32 @@ Indicates that the actor has acknowledged the object. This effectively signals t
 ```
 
 
-Object Types
-============
+## Object Types
 
 
-alert
------
+### alert
 
 Represents any kind of significant notification.
 
 
-application
------------
+### application
 
 Represents any kind of software application.
 
 
-article
--------
+### article
 
 Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources.
 
 
-Object Properties
-=================
+## Object Properties
 
 
-embedCode
----------
+### embedCode
 
 This property is defined to be a String. It is a fragment of HTML markup that, when embedded within another HTML page, provides an interactive user-interface for viewing or listening to the video or audio stream.
 
 
-stream
-------
+### stream
 
 This property is defined to be a Media Link. It represents an Activity Streams Media Link to the video or audio content itself. 
