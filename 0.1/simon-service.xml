@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services [
+    <!ENTITY core-adsl SYSTEM "core-adsl.html">
+    <!ENTITY base-adsl SYSTEM "base-adsl.html">
+    <!ENTITY add-adsl SYSTEM "add-adsl.html">
+]>
+<?xml-stylesheet type="text/xsl" href="adsl2html.xsl"?>
+<services>
+    <service>&core-adsl;</service>
+    <service>&base-adsl;</service>
+    <service>&add-adsl;</service>
+</services>
