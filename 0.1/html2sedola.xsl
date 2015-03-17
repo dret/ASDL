@@ -12,12 +12,14 @@
                 </title>
                 <!-- Test if the ADSL title is followed by anything other that <h2>. -->
                 <xsl:if test="local-name(*[2]) ne 'h2'">
-                    <!-- If there is something after the initial <h1>, <documentation> is required. -->
+                    <!-- If there is something between the initial <h1> and the first <h2>, <documentation> is required. -->
                     <documentation>
                         <!-- Test if the ADSL title is followed by an <h4> (a link). -->
                         <xsl:if test="local-name(*[2]) eq 'h4'">
                             <xsl:attribute name="href" select="*[2]/text()"/>
                         </xsl:if>
+                        <!-- Process everything between the initial <h1>/<h4>, and the first <h2>. -->
+                        <xsl:apply-templates select="*[count(preceding-sibling::h2) = 0][not(local-name() = ('h1','h2','h3','h4'))]"/>
                     </documentation>
                 </xsl:if>
             </xsl:if>
