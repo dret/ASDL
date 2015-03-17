@@ -69,7 +69,7 @@ ASDL uses [Markdown](http://daringfireball.net/projects/markdown/) as its syntax
 
 Three of the Markdown heading levels have special significance for ASDL, and must be used as following for an ASDL document do be considered correct:
 
-* **ASDL Title (H1 heading)**
+* **ASDL Title (H1 heading)**: Optionally, an ASDL document can have a title, which may be followed by an optional link to supporting documentation/description (see below). There also may be inline description markup following this ASDL title. If there is an ADSL title, it has to appear first in the ASDL document.
 
 * **ASDL Category (H2 heading)**
 
