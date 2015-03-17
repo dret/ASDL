@@ -3,7 +3,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     <xsl:template match="service">
-        <service>
+        <asdl>
             <!-- Test if the ADSL is starting with an <h1>. -->
             <xsl:if test="local-name(*[1]) eq 'h1'">
                 <!-- If there is an initial <h1>, create a <title> element (borrowed from Sedola). -->
@@ -40,7 +40,7 @@
                     </xsl:for-each-group>
                 </xsl:if>
             </xsl:for-each-group>
-        </service>
+        </asdl>
     </xsl:template>
     <!-- Markdown wraps paragraph-level code segments (contained in ''') in <p><code>, which does not render well in browsers. This template maps them to <pre>. -->
     <xsl:template match="p[count(*) eq 1 and local-name(*) eq 'code']">

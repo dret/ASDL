@@ -4,8 +4,11 @@
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     <xsl:include href="html2sedola.xsl"/>
     <xsl:template match="services">
-        <services>
-            <xsl:apply-templates select="service"/>
-        </services>
+        <xsl:variable name="asdl-set">
+            <adsl-set>
+                <xsl:apply-templates select="service"/>
+            </adsl-set>
+        </xsl:variable>
+        <xsl:copy-of select="asdl-set"/>
     </xsl:template>
 </xsl:stylesheet>
