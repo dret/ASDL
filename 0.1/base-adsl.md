@@ -1,5 +1,10 @@
 # Activity Streams Base Schema
 
+#### https://github.com/activitystreams/activity-schema/blob/master/activity-schema.md
+
+This document presents a base set of Object types and Verbs for use with Activity Streams.
+
+
 ## Verbs
 
 
