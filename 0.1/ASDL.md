@@ -73,6 +73,6 @@ Three of the Markdown heading levels have special significance for ASDL, and mus
 
 * **ASDL Category (H2 heading)**: A category is identified by an H2 heading with one of the titles "Verbs", "Object Types", or "Object Properties". A category groups all concepts of the same ASDL concept type (the three types listed above), and is then followed by as many ASDL concepts (documented in H3 headings) as the ASDL contains for this particular type.
 
-* **ASDL Concept (H3 heading)**
+* **ASDL Concept (H3 heading)**: A concept must appear in the context of a category (as described above), and documents one particular concept (one of "Verbs", "Object Types", or "Object Properties"). Optionally, an ASDL concept can have link to supporting documentation/description (see below). Following the optional link is the actual documentation of the ASDL concept, which can use MD markup as required.
 
 * **ASDL Links (H4 heading)**: ASDL supports links to supporting documentation or specifications through ASDL links. These links are used by *only* specifying a URI, and doing so in a H4 heading directly after the ASDL title, or an ASDL concept.
