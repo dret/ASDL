@@ -71,7 +71,7 @@ Three of the Markdown heading levels have special significance for ASDL, and mus
 
 * **ASDL Title (H1 heading)**: Optionally, an ASDL document can have a title, which may be followed by an optional link to supporting documentation/description (see below). There also may be inline description markup following this ASDL title. If there is an ADSL title, it has to appear first in the ASDL document.
 
-* **ASDL Category (H2 heading)**
+* **ASDL Category (H2 heading)**: A category is identified by an H2 heading with one of the titles "Verbs", "Object Types", or "Object Properties". A category groups all concepts of the same ASDL concept type (the three types listed above), and is then followed by as many ASDL concepts (documented in H3 headings) as the ASDL contains for this particular type.
 
 * **ASDL Concept (H3 heading)**
 
