@@ -23,5 +23,16 @@ This document presents a base set of Object types and Verbs for use with Activit
             <xsl:value-of select="replace(../../following-sibling::td[2]/pre/text(), '^\s+|\s+$', '')"/>
             <xsl:text>&#xa;```&#xa;&#xa;&#xa;</xsl:text>
         </xsl:for-each>
+        <xsl:text>## Object Types
+
+
+</xsl:text>
+        <xsl:for-each select="//section[@id eq 'object-types']/table/tr/td[1]/tt/text()">
+            <xsl:text>### </xsl:text>
+            <xsl:value-of select="."/>
+            <xsl:text>&#xa;&#xa;</xsl:text>
+            <xsl:value-of select="../../following-sibling::td[1]"/>
+            <xsl:text>&#xa;&#xa;&#xa;</xsl:text>
+        </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
