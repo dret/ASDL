@@ -33,10 +33,10 @@ This document presents a base set of Object types and Verbs for use with Activit
             <xsl:text>&#xa;&#xa;</xsl:text>
             <xsl:value-of select="../../following-sibling::td[1]"/>
             <xsl:text>&#xa;&#xa;&#xa;</xsl:text>
-            <xsl:text>## Object Properties
+        </xsl:for-each>
+        <xsl:text>## Object Properties
 
 
 </xsl:text>
-        </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
