@@ -40,5 +40,16 @@ This document presents a base set of Object types and Verbs for use with Activit
 
 
 </xsl:text>
+        <xsl:for-each select="//section[not(@id = ('verbs', 'object-types'))]/table[1]/tr/td[1]/tt/text()">
+            <xsl:text>### </xsl:text>
+            <xsl:value-of select="."/>
+            <xsl:text>&#xa;&#xa;</xsl:text>
+            <xsl:value-of select="../../following-sibling::td[2]"/>
+            <xsl:text>&#xa;&#xa;This property has the type ``</xsl:text>
+            <xsl:value-of select="../../following-sibling::td[1]"/>
+            <xsl:text>`` and only has well-defined meaning for objects of the following types: </xsl:text>
+            <xsl:value-of select="../../../../../@title"/>
+            <xsl:text>&#xa;&#xa;&#xa;</xsl:text>
+        </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
