@@ -3,6 +3,7 @@ Activity Stream Documentation Language (ASDL) 0.1
 
 The *Activity Stream Documentation Language (ASDL)* is used for describing Activity Streams (AS) vocabularies.
 
+
 Introduction
 ------------
 
@@ -29,6 +30,16 @@ AS 1.0 has an [explicit extension model section](http://activitystrea.ms/specs/j
 While this definition of "extension object properties seems to be specific to only Activities and Media Links, it should be kept in mind that [AS 1.0 explicitly allows that "*new extension properties can be added anywhere in the JSON serialization of an object or activity*"](http://activitystrea.ms/specs/json/1.0/#extensions). Thus, effectively any object type can be extended by adding object properties, meaning that the effective extension model for object properties is one that is not specific for any object type.
 
 In addition to this extension model, there also is a processing model that defines how extensions have to be handled when applications encounter extensions that they do not implement: "*Processors that encounter unfamiliar extension properties within an Object, Activity or Media Link MUST NOT stop processing or signal an error and MUST continue processing the items as if the extension properties were not present.*"
+
+
+ASDL Purpose
+---------------
+
+The main purpose of ASDL is to provide a registry of concepts that are used in AS-based infrastructures. It is specifically *not* a goal of ASDL to define how these concepts must be defined or described. This is left up to the creators of those concepts.
+
+As one example, it is possible that somebody defines a set of AS concept using [Resource Description Framework (RDF)](http://www.w3.org/RDF/) descriptions. In such a case, the concepts probably would be described in ways that allow them to be used in RDF-based applications. However, this level of description is outside the scope of ASDL. ASDL's single purpose is to provide simple documentation about those concepts, so that they can for example be published in a place where developers might look for information.
+
+This approach is very similar to the approach taken in the [Internet Assigned Numbers Authority (IANA)](http://www.iana.org/) [protocol assignments](http://www.iana.org/protocols). These also are meant to provide a place where developers can look up well-known concepts, and find links to the specifications defining them.
 
 
 ASDL Concepts
@@ -62,6 +73,7 @@ AS 1.0 extensions using ASDL for documenting their vocabulary can use ASDL to do
 
   * For object properties, the documentation MUST define how these properties are to be serialized within the JSON document.
 
+
 ASDL Documents
 --------------
 
@@ -76,3 +88,4 @@ Three of the Markdown heading levels have special significance for ASDL, and mus
 * **ASDL Concept (H3 heading)**: A concept must appear in the context of a category (as described above), and documents one particular concept (one of "Verbs", "Object Types", or "Object Properties"). Optionally, an ASDL concept can have link to supporting documentation/description (see below). Following the optional link is the actual documentation of the ASDL concept, which can use MD markup as required.
 
 * **ASDL Links (H4 heading)**: ASDL supports links to supporting documentation or specifications through ASDL links. These links are used by *only* specifying a URI, and doing so in a H4 heading directly after the ASDL title, or an ASDL concept.
+

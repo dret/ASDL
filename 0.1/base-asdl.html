@@ -1,0 +1,82 @@
+<h1>Activity Streams Base Schema</h1>
+
+<h4>https://github.com/activitystreams/activity-schema/blob/master/activity-schema.md</h4>
+
+<p>This document presents a base set of Object types and Verbs for use with Activity Streams.</p>
+
+<h2>Verbs</h2>
+
+<h3>accept</h3>
+
+<p>Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.</p>
+
+<p><code>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "accept",
+    "object": {
+      "objectType": "job", 
+      "displayName": "Director of Marketing"},
+    "title": "Sally accepted the Director of Marketing job."
+  }
+</code></p>
+
+<h3>access</h3>
+
+<p>Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.</p>
+
+<p><code>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "access",
+    "object": {
+      "objectType": "file", 
+      "displayName": "4Q2012 Sales Forecast.xls"},
+    "published": "2012-12-12T12:12:12Z",
+    "title": "Joe accessed the file \"4Q2012 Sales Forecast.xls\""
+  }</code></p>
+
+<h3>acknowledge</h3>
+
+<p>Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.</p>
+
+<p><code>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "acknowledge",
+    "object": {
+      "objectType": "issue", 
+      "displayName": "#123: There is a problem with the build"},
+    "Sally acknowledged Issue #123"
+  }
+</code></p>
+
+<h2>Object Types</h2>
+
+<h3>alert</h3>
+
+<p>Represents any kind of significant notification.</p>
+
+<h3>application</h3>
+
+<p>Represents any kind of software application.</p>
+
+<h3>article</h3>
+
+<p>Represents objects such as news articles, knowledge base entries, or other similar construct. Such objects generally consist of paragraphs of text, in some cases incorporating embedded media such as photos and inline hyperlinks to other resources.</p>
+
+<h2>Object Properties</h2>
+
+<h3>embedCode</h3>
+
+<p>This property is defined to be a String. It is a fragment of HTML markup that, when embedded within another HTML page, provides an interactive user-interface for viewing or listening to the video or audio stream.</p>
+
+<h3>stream</h3>
+
+<p>This property is defined to be a Media Link. It represents an Activity Streams Media Link to the video or audio content itself. </p>
