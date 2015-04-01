@@ -4,7 +4,7 @@
     <!ENTITY base-asdl SYSTEM "base-asdl.html">
     <!ENTITY add-adsl SYSTEM "add-asdl.html">
 ]>
-<?xml-stylesheet type="text/xsl" href="adsl2html.xsl"?>
+<?xml-stylesheet type="text/xsl" href="asdl2html.xsl"?>
 <services>
     <service>&core-asdl;</service>
     <service>&base-asdl;</service>
