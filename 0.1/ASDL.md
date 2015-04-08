@@ -27,7 +27,7 @@ AS 1.0 has an [explicit extension model section](http://activitystrea.ms/specs/j
 
 * **Object Properties**: "*Additional extension properties MAY also be defined for Activities and Media Links. The specification of these properties SHOULD define how they are to be serialized within the JSON document, and the specification MAY define how they are to be represented in other serialization formats. New properties SHOULD be defined such that the Object, Activity or Media Link would remain useful if those properties are omitted or removed during processing, to enable graceful fallback by consumers that do not implement the extension properties or alternative representations that are unable to represent the extensions.*"
 
-While this definition of "extension object properties seems to be specific to only Activities and Media Links, it should be kept in mind that [AS 1.0 explicitly allows that "*new extension properties can be added anywhere in the JSON serialization of an object or activity*"](http://activitystrea.ms/specs/json/1.0/#extensions). Thus, effectively any object type can be extended by adding object properties, meaning that the effective extension model for object properties is one that is not specific for any object type.
+While this definition of "extension object properties" seems to be specific to only Activities and Media Links, it should be kept in mind that [AS 1.0 explicitly allows that "*new extension properties can be added anywhere in the JSON serialization of an object or activity*"](http://activitystrea.ms/specs/json/1.0/#extensions). Thus, effectively any object type can be extended by adding object properties, meaning that the effective extension model for object properties is one that is not specific for any object type.
 
 In addition to this extension model, there also is a processing model that defines how extensions have to be handled when applications encounter extensions that they do not implement: "*Processors that encounter unfamiliar extension properties within an Object, Activity or Media Link MUST NOT stop processing or signal an error and MUST continue processing the items as if the extension properties were not present.*"
 
@@ -63,11 +63,11 @@ AS 1.0 extensions using ASDL for documenting their vocabulary can use ASDL to do
 
 * **Identifier**: This identifies the concept according to the concept's naming rules (strings or URIs for verbs and object types, strings for object properties).
 
-* **Documentation URI**: An optional URI linking to a description of the concept that may go beyond the expressiveness of ASDL. For example, it would be possible to link to URIs that dereference to RDF or other description frameworks, if the author of an extension chose create these descriptions and make them available. It can also just be a stable reference to the ASDL documentation itself, so that there always is a dereferencable identifier for a concept's description.
+* **Documentation URI**: An optional URI linking to a description of the concept that may go beyond the expressiveness of ASDL. For example, it would be possible to link to URIs that dereference to RDF or other description frameworks, if the author of an extension chose to create these descriptions and make them available. It can also just be a stable reference to the ASDL documentation itself, so that there always is a dereferencable identifier for a concept's description.
 
-* **Documentation Text**: The documentation text given an explanation of the documented concept. This documentation must satisfy the requirements given in the AS 1.0 extension model. This means the following:
+* **Documentation Text**: The documentation text gives an explanation of the documented concept. This documentation must satisfy the requirements given in the AS 1.0 extension model. This means the following:
 
-  * For verbs, it must define the meaning of the verb in terms of the actor, object and target properties of the activity, and MUST define whether a target is required and what it represents when present. 
+  * For verbs, it MUST define the meaning of the verb in terms of the actor, object and target properties of the activity, and MUST define whether a target is required and what it represents when present. 
 
   * For object types, the documentation MAY define additional properties.
 
@@ -83,9 +83,9 @@ Three of the Markdown heading levels have special significance for ASDL, and mus
 
 * **ASDL Title (H1 heading)**: Optionally, an ASDL document can have a title, which may be followed by an optional link to supporting documentation/description (see below). There also may be inline description markup following this ASDL title. If there is an ASDL title, it has to appear first in the ASDL document.
 
-* **ASDL Category (H2 heading)**: A category is identified by an H2 heading with one of the titles "Verbs", "Object Types", or "Object Properties". A category groups all concepts of the same ASDL concept type (the three types listed above), and is then followed by as many ASDL concepts (documented in H3 headings) as the ASDL contains for this particular type.
+* **ASDL Category (H2 heading)**: An ASDL category is identified by an H2 heading with one of the titles "Verbs", "Object Types", or "Object Properties". A category groups all concepts of the same ASDL concept type (the three types listed above), and is followed by as many ASDL concepts (documented in H3 headings) as the ASDL contains for this particular type.
 
-* **ASDL Concept (H3 heading)**: A concept must appear in the context of a category (as described above), and documents one particular concept (one of "Verbs", "Object Types", or "Object Properties"). Optionally, an ASDL concept can have link to supporting documentation/description (see below). Following the optional link is the actual documentation of the ASDL concept, which can use MD markup as required.
+* **ASDL Concept (H3 heading)**: A concept must appear in the context of a category (as described above), and documents an instance of one particular concept (one of "Verbs", "Object Types", or "Object Properties"). Optionally, an ASDL concept can have link to supporting documentation/description (see below). Following the optional link is the actual documentation of the ASDL concept (see "Documentation Text" above), which can use MD markup as required.
 
-* **ASDL Links (H4 heading)**: ASDL supports links to supporting documentation or specifications through ASDL links. These links are used by *only* specifying a URI, and doing so in a H4 heading directly after the ASDL title, or an ASDL concept.
+* **ASDL Links (H4 heading)**: ASDL supports links to supporting documentation or specifications through ASDL links. These links are used by *only* specifying a URI, and doing so in an H4 heading directly after the ASDL title, or an ASDL concept, directly after the concept heading.
 
