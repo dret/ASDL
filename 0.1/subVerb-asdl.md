@@ -6,7 +6,7 @@ The subVerb property allows the specialization of verbs, without requiring consu
 
 ### subVerb
 
-The subVerb property specified a specialization of the activity type that is given in an activity's verb property. It must be used in a way that interpreting the activity only based on the verb (i.e., without interpreting the more specific subVerb value), the activity still makes sense and can be meaningfully interpreted in a way that completely ignores the subVerb property.
+The subVerb property specifies a specialization of the activity type that is given in an activity's verb property. It must be used in a way that interpreting the activity only based on the verb (i.e., without considering the more specific subVerb value), the activity still makes sense and can be meaningfully interpreted in a way that completely ignores the subVerb property.
 
-Because the subVerb property specifically relates to the verb property, it only makes sense when it appear on an activity object, and has no defined meaning otherwise.
+Because the subVerb property specifically relates to the verb property, it only makes sense when it appears in an activity object, and has no defined meaning otherwise.
 
