@@ -22,6 +22,7 @@
                 <p>
                     <xsl:variable name="current-position" select="position()"/>
                     <xsl:for-each select="$document//*[local-name() eq ('as-verb','as-object-type','as-object-property')[$current-position]]">
+                        <xsl:sort select="@def"/>
                         <a href="" title="Source: { ../title/text() }">
                             <xsl:value-of select="@def"/>
                             <xsl:if test="position() ne last()">
