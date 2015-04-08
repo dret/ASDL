@@ -2,11 +2,11 @@
 <!DOCTYPE services [
     <!ENTITY core-asdl SYSTEM "core-asdl.html">
     <!ENTITY base-asdl SYSTEM "base-asdl.html">
-    <!ENTITY add-adsl SYSTEM "add-asdl.html">
+    <!ENTITY subVerb-asdl SYSTEM "subVerb-asdl.html">
 ]>
 <?xml-stylesheet type="text/xsl" href="asdl2html.xsl"?>
 <services>
     <service>&core-asdl;</service>
     <service>&base-asdl;</service>
-    <service>&add-asdl;</service>
+    <service>&subVerb-asdl;</service>
 </services>
