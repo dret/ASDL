@@ -16,13 +16,6 @@ The "post" verb describes the act of authoring an object and then publishing it 
 
 ## Object Types
 
-### object
-
-#### http://activitystrea.ms/specs/json/1.0/#object
-
-The "activity" object type indicates that an Object represents an Activity. It can be used whenever an event involving another activity is described within an Activity Stream. For instance, when one user "shares" or "reposts" an activity from another user.
-
-
 ### medialink
 
 #### http://activitystrea.ms/specs/json/1.0/#media-link
