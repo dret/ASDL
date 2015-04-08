@@ -8,5 +8,3 @@ AS are great at sharing information about activities across applications and ser
 ASDL is work in progress, currently the following resources are available:
 
 * Early drafts of the ASDL specification (currently: [0.1](0.1))
-
-* [An early sketch of what ASDL should be able to do, including an example.](InformalASDL.md)
