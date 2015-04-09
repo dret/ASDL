@@ -17,14 +17,25 @@
             <h1>ASDL Collection</h1>
             <ol>
                 <li><a href="#index">Cross-ASDL Index</a></li>
-                <li><a href="#asdl-listings">Individual ASDL Listings</a></li>
+                <li>
+                    <a href="#asdl-listings">Individual ASDL Listings</a>
+                    <ol>
+                        <xsl:for-each select="/asdl-set/asdl">
+                            <li>
+                                <a href="#{translate(title/text(), ' ', '')}">
+                                    <xsl:value-of select="title/text()"></xsl:value-of>
+                                </a>
+                            </li>
+                        </xsl:for-each>
+                    </ol>
+                </li>
             </ol>
             <hr/>
             <h2 id="index">Cross-ASDL Index</h2>
             <xsl:for-each select="('Verbs','Object Types','Object Properties')">
-                <h3>
+                <h4>
                     <xsl:value-of select="."/>
-                </h3>
+                </h4>
                 <p>
                     <xsl:variable name="current-position" select="position()"/>
                     <xsl:for-each select="$document//*[local-name() eq ('as-verb','as-object-type','as-object-property')[$current-position]]">
@@ -40,6 +51,21 @@
             </xsl:for-each>
             <hr/>
             <h2 id="asdl-listings">Individual ASDL Listings</h2>
+            <ol>
+                <xsl:for-each select="/asdl-set/asdl">
+                    <li>
+                        <a href="#{translate(title/text(), ' ', '')}">
+                            <xsl:value-of select="title/text()"></xsl:value-of>
+                        </a>
+                    </li>
+                </xsl:for-each>
+            </ol>
+            <xsl:for-each select="/asdl-set/asdl">
+                <hr/>
+                <h3 id="{translate(title/text(), ' ', '')}">
+                    <xsl:value-of select="title/text()"></xsl:value-of>
+                </h3>
+            </xsl:for-each>
         </html>
     </xsl:template>
 </xsl:stylesheet>
