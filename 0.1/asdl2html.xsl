@@ -32,23 +32,9 @@
             </ol>
             <hr/>
             <h2 id="index">Cross-ASDL Index</h2>
-            <xsl:for-each select="('Verbs','Object Types','Object Properties')">
-                <h4>
-                    <xsl:value-of select="."/>
-                </h4>
-                <p>
-                    <xsl:variable name="current-position" select="position()"/>
-                    <xsl:for-each select="$document//*[local-name() eq ('as-verb','as-object-type','as-object-property')[$current-position]]">
-                        <xsl:sort select="@def"/>
-                        <a href="" title="Source: { ../title/text() }">
-                            <xsl:value-of select="@def"/>
-                            <xsl:if test="position() ne last()">
-                                <xsl:text>&#160;· </xsl:text>
-                            </xsl:if>
-                        </a>
-                    </xsl:for-each>
-                </p>
-            </xsl:for-each>
+            <xsl:call-template name="create-index">
+                <xsl:with-param name="scope" select="$document"/>
+            </xsl:call-template>
             <hr/>
             <h2 id="asdl-listings">Individual ASDL Listings</h2>
             <ol>
@@ -67,5 +53,25 @@
                 </h3>
             </xsl:for-each>
         </html>
+    </xsl:template>
+    <xsl:template name="create-index">
+        <xsl:param name="scope"/>
+        <xsl:for-each select="('Verbs','Object Types','Object Properties')">
+            <h4>
+                <xsl:value-of select="."/>
+            </h4>
+            <p>
+                <xsl:variable name="current-position" select="position()"/>
+                <xsl:for-each select="$scope//*[local-name() eq ('as-verb','as-object-type','as-object-property')[$current-position]]">
+                    <xsl:sort select="@def"/>
+                    <a href="" title="Source: { ../title/text() }">
+                        <xsl:value-of select="@def"/>
+                        <xsl:if test="position() ne last()">
+                            <xsl:text>&#160;· </xsl:text>
+                        </xsl:if>
+                    </a>
+                </xsl:for-each>
+            </p>
+        </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
