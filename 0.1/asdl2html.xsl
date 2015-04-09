@@ -51,15 +51,19 @@
                 <h3 id="{translate(title/text(), ' ', '')}">
                     <xsl:value-of select="title/text()"></xsl:value-of>
                 </h3>
+                <h4>Index</h4>
+                <xsl:call-template name="create-index">
+                    <xsl:with-param name="scope" select="."/>
+                </xsl:call-template>
             </xsl:for-each>
         </html>
     </xsl:template>
     <xsl:template name="create-index">
         <xsl:param name="scope"/>
         <xsl:for-each select="('Verbs','Object Types','Object Properties')">
-            <h4>
+            <h5>
                 <xsl:value-of select="."/>
-            </h4>
+            </h5>
             <p>
                 <xsl:variable name="current-position" select="position()"/>
                 <xsl:for-each select="$scope//*[local-name() eq ('as-verb','as-object-type','as-object-property')[$current-position]]">
