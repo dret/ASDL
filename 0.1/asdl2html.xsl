@@ -3,6 +3,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
     <xsl:include href="html2sedola.xsl"/>
+    <xsl:variable name="asdl-categories" select="('Verbs','Object Types','Object Properties')"/>
     <xsl:template match="services">
         <xsl:variable name="asdl-set">
             <asdl-set>
@@ -60,7 +61,7 @@
     </xsl:template>
     <xsl:template name="create-index">
         <xsl:param name="scope"/>
-        <xsl:for-each select="('Verbs','Object Types','Object Properties')">
+        <xsl:for-each select="$asdl-categories">
             <h5>
                 <xsl:value-of select="."/>
             </h5>
