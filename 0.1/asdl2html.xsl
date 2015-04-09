@@ -53,9 +53,31 @@
                     <xsl:value-of select="title/text()"></xsl:value-of>
                 </h3>
                 <h4>Index</h4>
+                <xsl:variable name="asdl-scope" select="."/>
                 <xsl:call-template name="create-index">
-                    <xsl:with-param name="scope" select="."/>
+                    <xsl:with-param name="scope" select="$asdl-scope"/>
                 </xsl:call-template>
+                <xsl:for-each select="$asdl-categories">
+                    <h5>
+                        <xsl:value-of select="."/>
+                    </h5>
+                    <table border="1">
+                        <xsl:variable name="current-position" select="position()"/>
+                        <xsl:for-each select="$asdl-scope//*[local-name() eq ('as-verb','as-object-type','as-object-property')[$current-position]]">
+                            <xsl:sort select="@def"/>
+                            <tr id="{translate(../title/text(), ' ', '')}-{@def}">
+                                <th valign="top">
+                                    <code>
+                                        <xsl:value-of select="@def"/>
+                                    </code>
+                                </th>
+                                <td>
+                                    <xsl:copy-of select="documentation/node()"/>
+                                </td>
+                            </tr>
+                        </xsl:for-each>
+                    </table>
+                </xsl:for-each>
             </xsl:for-each>
         </html>
     </xsl:template>
@@ -63,7 +85,7 @@
         <xsl:param name="scope"/>
         <xsl:for-each select="$asdl-categories">
             <h5>
-                <xsl:value-of select="."/>
+                <xsl:value-of select="concat(., ' Index')"/>
             </h5>
             <p>
                 <xsl:variable name="current-position" select="position()"/>
