@@ -68,7 +68,16 @@
                             <tr id="{translate(../title/text(), ' ', '')}-{@def}">
                                 <th valign="top">
                                     <code>
-                                        <xsl:value-of select="@def"/>
+                                        <xsl:choose>
+                                            <xsl:when test="exists(documentation/@href)">
+                                                <a href="{documentation/@href}">
+                                                    <xsl:value-of select="@def"/>
+                                                </a>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:value-of select="@def"/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
                                     </code>
                                 </th>
                                 <td>
