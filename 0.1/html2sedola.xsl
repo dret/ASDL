@@ -47,7 +47,7 @@
             <xsl:apply-templates select="code/node()"/>
         </pre>
     </xsl:template>
-    <!-- The identity transform for all nodes not explicitly matches above. -->
+    <!-- The identity transform for all nodes not explicitly matched above. -->
     <xsl:template match="@*|node()">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
