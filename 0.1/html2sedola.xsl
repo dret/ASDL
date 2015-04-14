@@ -22,7 +22,7 @@
                     </documentation>
                 </xsl:if>
             </xsl:if>
-            <!-- Group the ADSL document by groups starting with <h2> (the basic ADSL concepts). -->
+            <!-- Group the ASDL document by groups starting with <h2> (the basic ADSL concepts). -->
             <xsl:for-each-group select="*" group-starting-with="h2">
                 <xsl:variable name="index" select="index-of(('verbs','object types','object properties'), normalize-space(lower-case(self::h2/text())))"/>
                 <xsl:if test="$index gt 0">
