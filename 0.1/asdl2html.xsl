@@ -21,7 +21,7 @@
                 <li>
                     <a href="#asdl-listings">Individual ASDL Listings</a>
                     <ol>
-                        <xsl:for-each select="/asdl-set/asdl">
+                        <xsl:for-each select="asdl">
                             <li>
                                 <a href="#{translate(title/text(), ' ', '')}">
                                     <xsl:value-of select="title/text()"></xsl:value-of>
