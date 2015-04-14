@@ -39,7 +39,7 @@
             <hr/>
             <h2 id="asdl-listings">Individual ASDL Listings</h2>
             <ol>
-                <xsl:for-each select="/asdl-set/asdl">
+                <xsl:for-each select="asdl">
                     <li>
                         <a href="#{translate(title/text(), ' ', '')}">
                             <xsl:value-of select="title/text()"></xsl:value-of>
@@ -47,7 +47,7 @@
                     </li>
                 </xsl:for-each>
             </ol>
-            <xsl:for-each select="/asdl-set/asdl">
+            <xsl:for-each select="asdl">
                 <hr/>
                 <h3 id="{translate(title/text(), ' ', '')}">
                     <xsl:value-of select="title/text()"></xsl:value-of>
