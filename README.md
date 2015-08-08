@@ -10,3 +10,5 @@ The goal of ASDL is to allow AS publishers to provide access to their AS vocabul
 ASDL is work in progress, currently the following resources are available:
 
 * Early drafts of the ASDL specification (currently: [0.1](0.1))
+* [Simon Mayer, Florian Michahelles, and Erik Wilde, "A Connective Fabric for Bridging Internet of Things Silos", Fifth International Conference on the Internet of Things (IoT 2015), Seoul, South Korea, October 2015](http://dret.net/netdret/publications#wil15c)
+
